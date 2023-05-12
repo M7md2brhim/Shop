@@ -1,0 +1,439 @@
+:root {
+  --primaryColor: #24bca4;
+  --secondaryColor: ;
+  --fontColor: rgb(43, 43, 43); 
+  --sectionPadding: 60px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+  width: 80vw;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* nav */
+
+nav {
+  background-color: black;
+  padding: 30px 0;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .container img {
+  width: 100px;
+}
+
+nav .container .right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+nav .container .right ul {
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  list-style-type: none;
+  flex-grow: 1;
+}
+
+nav .container .right ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav .container .right ul li a:hover {
+  color: var(--primaryColor);
+}
+
+nav .container .right .icon {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav .container .right .icon img {
+  width: 15px;
+  filter: invert(100%) sepia(0%) saturate(7446%) hue-rotate(83deg) brightness(112%) contrast(99%);
+  position: relative;
+}
+
+nav .container .right .icon a {
+  position: relative;
+}
+
+nav .container .right .icon a:first-child:after {
+  content: "0";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--primaryColor);
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+/* END nav */
+
+/* main */
+
+main {
+  background-color: #EEE;
+  padding: var(--sectionPadding) 0;
+}
+
+main .container .path {
+  margin: 20px 0;
+  color: rgb(51, 51, 51);
+}
+
+main .container .path a {
+  color: rgb(51, 51, 51);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+main .container .path a:hover {
+  color: var(--primaryColor);
+}
+
+main .container .product {
+  display: flex;
+  gap: 180px;
+}
+
+main .container .product img {
+  width: 100%;
+}
+
+main .container .product .text .price {
+  font-size: 30px;
+  color: var(--primaryColor);
+  font-weight: bold;
+}
+
+main .container .product .text .price del {
+  color: rgb(138, 138, 138);
+  margin-inline-end: 20px;
+}
+
+main .container .product .text .description {
+  color: rgb(102, 102, 102);
+  line-height: 1.6;
+}
+
+main .container .product .text select {
+  padding: 10px;
+  outline: none;
+  border: none;
+  margin-inline-end: 10px;
+}
+
+main .container .product .text .add {
+  display: inline-block;
+  padding: 12px 30px;
+  color: white;
+  background-color: var(--primaryColor);
+  cursor: pointer;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+main .container .product .text table {
+  margin: 20px 0;
+  border-collapse: separate; 
+  border-spacing: 10px;
+  color: rgb(85, 85, 85);
+}
+
+main .container .product .text table th {
+  all: initial;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Work Sans', sans-serif;
+  color: black;
+}
+
+main .container .product .text table span {
+  font-weight: bold;
+}
+
+/* END main */
+
+/* des-rev */
+
+.des-rev {
+  padding: 20px 0 var(--sectionPadding) 0;
+}
+
+.des-rev .container .tabs {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.des-rev .container .tabs a {
+  padding: 20px 0;
+  font-size: 17px;
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+.des-rev .container .tabs a:hover,
+.des-rev .container .tabs a:focus {
+  color: var(--primaryColor);
+}
+
+.des-rev .container hr {
+  border: 1px solid rgb(199, 199, 199);
+  margin: 0;
+  padding: 0;
+  opacity: 0.4;
+}
+
+.des-rev .container .tabs a:hover::after {
+  content: "";
+  border: 1px solid var(--primaryColor);
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  animation-name: border-bottom;
+  animation-duration: 0.3s;
+}
+
+.des-rev .container .tabs a:focus::after {
+  content: "";
+  border: 1px solid var(--primaryColor);
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+@keyframes border-bottom {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.des-rev .container p {
+  color: rgb(102, 102, 102);
+  line-height: 1.6;
+}
+
+/* END des-rev */
+
+/* related */
+
+.related {
+  background-color: #EEE;
+  padding: var(--sectionPadding) 0 calc(var(--sectionPadding) + 30px) 0;
+}
+
+.related .container div.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+  color: var(--fontColor);
+  text-align: center;
+}
+
+.related .container div.cards a {
+  width: calc((100% - 6%) / 4);
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+.related .container div.cards .photo {
+  overflow: hidden;
+}
+
+.related .container div.cards a .card img {
+  width: 100%;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+}
+
+.related .container div.cards a .card img:hover {
+  transform: rotate(3deg) scale(1.1);
+  -webkit-transform: rotate(3deg) scale(1.1);
+  -moz-transform: rotate(3deg) scale(1.1);
+  -ms-transform: rotate(3deg) scale(1.1);
+  -o-transform: rotate(3deg) scale(1.1);
+}
+
+.related .container div.cards a .card p:first-of-type {
+  font-weight: bold;
+}
+
+.related .container div.cards a .card p[class="price"] del {
+  color: rgb(145, 145, 145);
+}
+
+.related .container div.cards a .card.special::after {
+  content: "-33%";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 13px;
+  color: white;
+  background-color: var(--primaryColor);
+  padding: 5px 10px;
+}
+
+.related .container div.cards a .card .stars {
+  display: flex;
+  justify-content: center;
+}
+
+.related .container div.cards a .card .stars img {
+  width: 15px;
+  filter: invert(80%) sepia(58%) saturate(1700%) hue-rotate(341deg) brightness(102%) contrast(102%);
+  -webkit-filter: invert(80%) sepia(58%) saturate(1700%) hue-rotate(341deg) brightness(102%) contrast(102%);
+}
+
+.related .container div.cards a .card .stars img[class="special"] {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+/* END related */
+
+/* footer */
+
+footer {
+  background-color: #1a191d;
+  padding: var(--sectionPadding) 0 20px 0;
+}
+
+footer .container .top {
+  padding-bottom: var(--sectionPadding);
+  display: flex;
+  gap: 50px;
+}
+
+footer .container .top div {
+  width: calc(100% - (50px*3) / 4);
+}
+
+footer .container .top .about img {
+  width: 100px;
+  margin-top: 20px;
+}
+
+footer .container .top h2 {
+  margin: 20px 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+footer .container .top p {
+  color: #cfcfcf;
+  font-size: 13px;
+}
+
+footer .container .top p i {
+  color: var(--primaryColor);
+  padding-right: 5px;
+}
+
+footer .container .top a {
+  text-decoration: none;
+  display: block;
+  color: #cfcfcf;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+footer .container .top .update input {
+  padding: 10px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 13px;
+  background-color: #0f0e11;
+}
+
+footer .container .top .update::after {
+  content: "\2192";
+  position: relative;
+  right: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+footer .container .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding-top: 5px;
+  font-size: 14px;
+}
+
+footer .container .bottom span {
+  color: var(--primaryColor);
+}
+
+footer .container hr {
+  width: 100%;
+  border: 1px solid rgb(66, 66, 66);
+  opacity: 0.3;
+}
+
+footer .container .bottom .social {
+  display: flex;
+  gap: 20px;
+}
+
+footer .container .bottom .social img {
+  width: 20px;
+}
+
+/* END footer */
